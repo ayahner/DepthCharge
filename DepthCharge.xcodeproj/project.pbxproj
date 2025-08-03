@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		89C0334C2E3FCFA10095996F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 89C0334B2E3FCFA10095996F /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		89C0332F2E3FCE3A0095996F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		89C033152E3FCE390095996F /* DepthCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C0332E2E3FCE3A0095996F /* DepthChargeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepthChargeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C033382E3FCE3A0095996F /* DepthChargeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepthChargeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C0334B2E3FCFA10095996F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		89C0330C2E3FCE390095996F = {
 			isa = PBXGroup;
 			children = (
+				89C0334B2E3FCFA10095996F /* .gitignore */,
 				89C033172E3FCE390095996F /* DepthCharge */,
 				89C033312E3FCE3A0095996F /* DepthChargeTests */,
 				89C0333B2E3FCE3A0095996F /* DepthChargeUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C0334C2E3FCFA10095996F /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
