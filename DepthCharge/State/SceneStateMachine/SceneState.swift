@@ -13,8 +13,6 @@ import os
 class SceneState: BaseState {
   private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "SceneState")
 
-  var scene: GameScene!
-
   var previousState: GKState.Type?
 
   func getStateMachine() -> SceneStateMachine {

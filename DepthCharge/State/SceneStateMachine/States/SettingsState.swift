@@ -1,5 +1,5 @@
 //
-//  OptionsState.swift
+//  SettingsState.swift
 //  DepthCharge
 //
 //  Created by Andrew Yahner on 8/4/25.
@@ -10,13 +10,8 @@ import Foundation
 import GameplayKit
 import os
 
-class OptionsState: SceneState {
-  private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "OptionsState")
-
-  init(scene: OptionsScene) {
-    super.init()
-    self.scene = scene
-  }
+class SettingsState: SceneState {
+  private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "SettingsState")
 
   override func isValidNextState(_ stateClass: AnyClass) -> Bool {
     return stateClass is BoardState.Type || stateClass is MainState.Type
@@ -24,8 +19,12 @@ class OptionsState: SceneState {
 
   override func didEnter(from previousState: GKState?) {
     super.didEnter(from: previousState)
+
+    let size = getStateMachine().skView!.bounds.size
+    let scene = SettingsScene(size: size, stateMachine: getStateMachine());
+
     if previousState == nil {
-      getStateMachine().viewController.skView!.presentScene(scene)
+      getStateMachine().skView!.presentScene(scene)
     } else {
       var transition: SKTransition
       switch previousState! {
@@ -39,7 +38,7 @@ class OptionsState: SceneState {
         logger.log("Unexpected previous state \(String(describing: previousState))")
         transition = SKTransition.fade(withDuration: AppPrefs.SCENE_TRANSITION_DURATION)
       }
-      getStateMachine().viewController.skView!.presentScene(
+      getStateMachine().skView!.presentScene(
         scene, transition: transition)
     }
   }
