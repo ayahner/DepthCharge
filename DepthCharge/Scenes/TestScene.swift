@@ -1,8 +1,9 @@
 //
 //  MainScene.swift
-//  Forty-Fives
+//  DepthCharge
 //
-//  Created by Andrew Yahner on 3/5/25.
+//  Created by Andrew Yahner on 8/4/25.
+//  Copyright © 2025 SquatchCode. All rights reserved.
 //
 
 import GameKit
@@ -13,15 +14,16 @@ class TestScene: GameScene, Alertable {
   private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "TestScene")
 
   var background = SKSpriteNode()
-  let testPanel = TestPanel(position: .zero, size: CGSize(width: 1024, height: 472))
+//  let testPanel = TestPanel(position: .zero, size: CGSize(width: 1024, height: 472))
 
   override init(size: CGSize) {
     super.init(size: size)
   }
 
   override func sceneDidLoad() {
+    logger.debug("TestScene loading...")
     initTestUi()
-    addChild(testPanel)
+//    addChild(testPanel)
   }
 
   func initTestUi() {
@@ -31,9 +33,30 @@ class TestScene: GameScene, Alertable {
     background.position = position
     addChild(background)
 
-    let testButton = SpriteButton("BackButton", systemName: "stethoscope.circle")
-    testButton.position = CGPoint(x: size.width/2 - 90, y: 185)
-    addChild(testButton)
+    let label = SKLabelNode(text: "Test Scene")
+    logger.debug("size: width: \(self.size.width), height: \(self.size.height)")
+    
+    label.fontName = "HelveticaNeue-Bold"//AppPrefs.shared.getString(Category.general, AppPrefs.FONT_NAME)
+    label.fontColor = .white
+    label.fontSize = 40
+    label.position = CGPoint(x: 0, y: 0)
+    addChild(label)
+    
+    print("🔍 fontName = \(label.fontName!)")
+//    let testButton = SpriteButton("BackButton", systemName: "stethoscope.circle")
+//    testButton.position = CGPoint(x: size.width/2 - 90, y: 185)
+//    addChild(testButton)
+    
+    for node in children {
+      // skip nodes that already have bodies, or shape nodes you don’t care about
+      guard node.physicsBody == nil else { continue }
+
+      // create a rectangle body the size of the node’s frame
+      let body = SKPhysicsBody(rectangleOf: node.frame.size)
+      body.isDynamic = false   // so it doesn’t start falling
+      node.physicsBody = body
+    }
+    
   }
 
   override func didMove(to _: SKView) {
@@ -49,7 +72,8 @@ class TestScene: GameScene, Alertable {
         sceneStateMachine?.enter(MainState.self)
       }
     default:
-      testPanel.buttonAction(name: name)
+      logger.debug("Button pressed with name: \(name)")
+//      testPanel.buttonAction(name: name)
     }
   }
 

@@ -1,9 +1,9 @@
 //
 //  ApplicationPreferences.swift
-//  Forty-Fives
+//  DepthCharge
 //
-//  Created by Andrew Yahner on 3/14/25.
-//  Copyright © 2025 Thoroughcity. All rights reserved.
+//  Created by Andrew Yahner on 8/4/25.
+//  Copyright © 2025 SquatchCode. All rights reserved.
 //
 
 import Foundation
@@ -52,7 +52,6 @@ struct AppPrefs {
   public static let FONT_NAME_CONDENSED_LIGHT = "Font Name Condensed Light"
   public static let FONT_NAME_CONDENSED = "Font Name Condensed"
   public static let FONT_NAME_CONDENSED_BOLD = "Font Name Condensed Bold"
-  public static let DECK_NAME = "Deck Name"
   public static let SHOW_BACKGROUND = "Show Background"
 
   /* General: CGFloat */
@@ -68,7 +67,6 @@ struct AppPrefs {
   private var dictionary: NSDictionary?
 
   private init() {
-    //TODO:  get this name from the app bundle?
     if let path: String = Bundle.main.path(forResource: plistFileName, ofType: "plist") {
       if let dict = NSDictionary(contentsOfFile: path) {
         self.dictionary = dict

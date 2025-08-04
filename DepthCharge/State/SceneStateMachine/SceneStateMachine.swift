@@ -1,9 +1,9 @@
 //
 //  SceneStateMachine.swift
-//  Forty Fives
+//  DepthCharge
 //
-//  Created by Andrew Yahner on 7/24/17.
-//  Copyright © 2025 Thoroughcity. All rights reserved.
+//  Created by Andrew Yahner on 8/4/25.
+//  Copyright © 2025 SquatchCode. All rights reserved.
 //
 
 import GameplayKit
@@ -12,10 +12,10 @@ import os
 public class SceneStateMachine: GKStateMachine {
   private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "State")
 
-  let mainScene: MainScene!
-  let boardScene: BoardScene!
-  let optionsScene: OptionsScene!
-  let helpScene: HelpScene!
+//  let mainScene: MainScene!
+//  let boardScene: BoardScene!
+//  let optionsScene: OptionsScene!
+//  let helpScene: HelpScene!
   let testScene: TestScene!
 
   let viewController: AppController!
@@ -27,10 +27,10 @@ public class SceneStateMachine: GKStateMachine {
     testScene: TestScene
   ) {
     self.viewController = viewController
-    self.mainScene = mainScene
-    self.boardScene = boardScene
-    self.optionsScene = optionsScene
-    self.helpScene = helpScene
+//    self.mainScene = mainScene
+//    self.boardScene = boardScene
+//    self.optionsScene = optionsScene
+//    self.helpScene = helpScene
     self.testScene = testScene
     super.init(states: [
       MainState(scene: mainScene),
@@ -39,10 +39,10 @@ public class SceneStateMachine: GKStateMachine {
       HelpState(scene: helpScene),
       TestState(scene: testScene),
     ])
-    self.mainScene.sceneStateMachine = self
-    self.boardScene.sceneStateMachine = self
-    self.optionsScene.sceneStateMachine = self
-    self.helpScene.sceneStateMachine = self
+//    self.mainScene.sceneStateMachine = self
+//    self.boardScene.sceneStateMachine = self
+//    self.optionsScene.sceneStateMachine = self
+//    self.helpScene.sceneStateMachine = self
     self.testScene.sceneStateMachine = self
   }
 }

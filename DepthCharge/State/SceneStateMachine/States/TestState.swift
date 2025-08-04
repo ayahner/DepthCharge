@@ -1,9 +1,9 @@
 //
 //  TestState.swift
-//  Forty Fives
+//  DepthCharge
 //
-//  Created by Andrew Yahner on 4/3/25.
-//  Copyright © 2025 Thoroughcity. All rights reserved.
+//  Created by Andrew Yahner on 8/4/25.
+//  Copyright © 2025 SquatchCode. All rights reserved.
 //
 
 import Foundation
