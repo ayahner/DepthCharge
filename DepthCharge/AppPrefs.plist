@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   AppPrefs.plist
+   DepthCharge
+
+   Created by Andrew Yahner on 8/4/25.
+   Copyright (c) 2025 SquatchCode. All rights reserved.
+-->
+<plist version="1.0">
+<dict>
+  <key>General</key>
+  <dict>
+    <key>Alpha Enabled</key>
+    <string>1.0</string>
+    <key>Alpha Disabled</key>
+    <string>0.2</string>
+    <key>Font Name</key>
+    <string>Montserrat</string>
+    <key>Font Name Light</key>
+    <string>Montserrat-Light</string>
+    <key>Font Name Semi Bold</key>
+    <string>Montserrat-Semibold</string>
+    <key>Font Name Bold</key>
+    <string>Montserrat-Bold</string>
+    <key>Font Size</key>
+    <integer>18</integer>
+    <key>Navigation Icon Size</key>
+    <integer>24</integer>
+    <key>Show Background</key>
+    <true/>
+  </dict>
+  <key>Panel</key>
+  <dict>
+    <key>Line Width</key>
+    <integer>3</integer>
+    <key>Corner Radius</key>
+    <integer>10</integer>
+    <key>Margin Width</key>
+    <integer>15</integer>
+    <key>Margin Height</key>
+    <integer>15</integer>
+    <key>Max Columns</key>
+    <integer>3</integer>
+  </dict>
+  <key>Button</key>
+  <dict>
+    <key>Width</key>
+    <integer>155</integer>
+    <key>Height</key>
+    <integer>40</integer>
+    <key>Line Width</key>
+    <integer>3</integer>
+    <key>Corner Radius</key>
+    <integer>10</integer>
+    <key>Enabled Alpha</key>
+    <integer>1</integer>
+    <key>Disabled Alpha</key>
+    <real>0.2</real>
+    <key>Font Name</key>
+    <string>Montserrat-Bold</string>
+    <key>Font Size</key>
+    <integer>18</integer>
+    <key>Font Offset X</key>
+    <integer>0</integer>
+    <key>Font Offset Y</key>
+    <integer>0</integer>
+    <key>Font Horizontal Align</key>
+    <string>Center</string>
+    <key>Font Vertical Align</key>
+    <string>Center</string>
+  </dict>
+</dict>
+</plist>
