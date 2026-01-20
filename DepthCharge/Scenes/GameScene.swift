@@ -13,6 +13,7 @@ import os
 class GameScene: SKScene {
   
   private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "GameScene")
+  let margin = CGFloat.zero
 
   var updatables = [Updatable]()
 
@@ -81,7 +82,6 @@ class GameScene: SKScene {
 
   func drawTestPattern() {
     
-    let margin = CGFloat.zero
     let insets = view!.safeAreaInsets
 
     let left = insets.left + margin

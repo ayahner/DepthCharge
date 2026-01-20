@@ -44,11 +44,11 @@ class SpriteButton: SKSpriteNode, Button {
     self.isUserInteractionEnabled = true
   }
 
-  convenience init(_ name: String, systemName: String) {
+  convenience init(_ name: String, systemName: String, color: UIColor = .appLight) {
     let optionsTexture = SKTexture(
       systemName: systemName,
       pointSize: AppPrefs.shared.getDouble(Category.general, AppPrefs.NAVIGATION_ICON_SIZE),
-      color: UIColor.appLight)
+      color: color)
     self.init(texture: optionsTexture, color: .clear, size: optionsTexture!.size())
     self.name = name
   }

@@ -56,9 +56,9 @@ class MainScene: GameScene, Alertable {
     helpButton.position = CGPoint(x: size.width / 2, y: settingsButton.position.y - helpButton.size.height - buttonMargin)
     addChild(helpButton)
 
-    let testButton = ShapeButton("TestButton", buttonText: "Test Scene")
-    testButton.position = CGPoint(x: size.width / 2, y: helpButton.position.y - testButton.size.height - buttonMargin)
-    addChild(testButton)
+//    let testButton = ShapeButton("TestButton", buttonText: "Test Scene")
+//    testButton.position = CGPoint(x: size.width / 2, y: helpButton.position.y - testButton.size.height - buttonMargin)
+//    addChild(testButton)
 
 
     drawTestPattern()

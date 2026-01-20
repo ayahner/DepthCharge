@@ -16,7 +16,6 @@ class ShapeButton: SKShapeNode, Button {
   var skLabel: SKLabelNode = SKLabelNode()
   var cornerRadius: CGFloat = 10
   var size: CGSize = CGSize.zero
-
   var actionType: ActionType = .normal { didSet { setButtonPalette() } }
 
   var enabled = true {

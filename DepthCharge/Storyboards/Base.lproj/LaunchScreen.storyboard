@@ -10,7 +10,7 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-bg" id="mwc-E6-hAL">
+                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depth-charge-launch-screen" id="qQv-jZ-Skq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -21,6 +21,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch-bg" width="1125" height="2436"/>
+        <image name="depth-charge-launch-screen" width="1125" height="2436"/>
     </resources>
 </document>
